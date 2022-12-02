@@ -9,3 +9,4 @@ Back End
 - We need to connect to DB database 
 - We need to connect this with the front-end. Maybe using a fetch
 
+-Ask in office hours. How to do git branch with team. To merge to main. 
