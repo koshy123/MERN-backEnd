@@ -12,10 +12,10 @@ const mongoURI =
 // Pass a second argument which is an object with the options for the connection.
 mongoose
   .connect(mongoURI, {
-    useNewUrlParser: true,
-    useCreateIndex: true,
-    useUnifiedTopology: true,
-    useFindAndModify: false,
+    // useNewUrlParser: true,
+    // useCreateIndex: true,
+    // useUnifiedTopology: true,
+    // useFindAndModify: false,
   })
   // If the connection is successful, give a message in the Terminal with the db name
   .then((instance) =>
