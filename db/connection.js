@@ -6,7 +6,7 @@ require('dotenv').config()
 // `MONGODB_URI` environmental variable.  If not, just use the local db address.
 const mongoURI = process.env.DATABASE_URL
   process.env.NODE_ENV === 'production'
-    ? process.env.MONGODB_URI
+    ? process.env.DATABASE_URL
     : 'mongodb://localhost/back-end';
 
 // Use Mongoose's connect method to connect to MongoDB by passing it the db URI.
