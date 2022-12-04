@@ -5,6 +5,7 @@ const cors = require('cors');
 
 const bodyParser = require('body-parser')
 
+require("dotenv").config({ path: "./.env" });
 
 // Instantiate express application object
 const app = express();
