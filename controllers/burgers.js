@@ -36,8 +36,8 @@ router.post('/', (req, res) => {
 
 // UPDATE
 // PUT api/jobs/5a7db6c74d55bc51bdf39793
-router.put('/:id', (req, res) => {
-  Burger.findOneAndUpdate({ _id: req.params.id }, req.body, {
+router.put('/:patty', (req, res) => {
+  Burger.findOneAndUpdate({ patty: req.params.patty }, req.body, {
     new: true,
   }).then((adjustBurger) => res.json(adjustBurger));
 });
