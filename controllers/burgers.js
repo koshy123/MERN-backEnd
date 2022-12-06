@@ -17,7 +17,7 @@ router.get('/', (req, res) => {
 // SHOW
 // GET api/jobs/5a7db6c74d55bc51bdf39793
 
-router.get('/:patty', async (req, res, next) => {
+router.get('/:id', async (req, res, next) => {
 	try {
 		const burgerId = await Burger.find({patty: req.params.patty });
 		res.json(burgerId);
@@ -36,8 +36,9 @@ router.post('/', (req, res) => {
 
 // UPDATE
 // PUT api/jobs/5a7db6c74d55bc51bdf39793
-router.put('/:patty', (req, res) => {
-  Burger.findOneAndUpdate({ patty: req.params.patty }, req.body, {
+router.put('/:id', (req, res) => {
+  console.log(req.params.id)
+  Burger.findOneAndUpdate({ _id: req.params.id }, req.body, {
     new: true,
   }).then((adjustBurger) => res.json(adjustBurger));
 });
